@@ -1,0 +1,165 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: false
+    file_source:
+      path: rager/data_loaders/mystic_sublime.py
+  downstream_blocks:
+  - starlit_arcana
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - ingest
+  has_callback: false
+  language: python
+  name: Mystic sublime
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: mystic_sublime
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/starlit_arcana.py
+  downstream_blocks:
+  - mesmerizing_crucible
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - chunking
+  has_callback: false
+  language: python
+  name: Starlit arcana
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - mystic_sublime
+  uuid: starlit_arcana
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/mesmerizing_crucible.py
+  downstream_blocks:
+  - astral_conduit
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - tokenization
+  has_callback: false
+  language: python
+  name: Mesmerizing crucible
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - starlit_arcana
+  uuid: mesmerizing_crucible
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1723758731
+      name: astral_conduit.py
+      output: null
+      path: /home/src/llm/rager/data_exporters/astral_conduit.py
+      relative_path: llm/rager/data_exporters/astral_conduit.py
+      size: 2054
+    file_source:
+      path: rager/data_exporters/astral_conduit.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://elasticsearch:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks:
+  - quantum_quasar
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Astral conduit
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - mesmerizing_crucible
+  uuid: astral_conduit
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1723758849
+      name: quantum_quasar.py
+      output: null
+      path: /home/src/llm/rager/data_loaders/quantum_quasar.py
+      relative_path: llm/rager/data_loaders/quantum_quasar.py
+      size: 1493
+    file_source:
+      path: rager/data_loaders/quantum_quasar.py
+    templates:
+      elasticsearch:
+        variables:
+          chunk_column: chunk
+          connection_string: http://elasticsearch:9200
+          index_name: documents_20240815_5306
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - iterative_retrieval
+  has_callback: false
+  language: python
+  name: Quantum quasar
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - astral_conduit
+  uuid: quantum_quasar
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-08-15 21:47:56.460390+00:00'
+data_integration: null
+description: llmzoomcamp_homework_vesrion_2
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Elemental spectral
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: elemental_spectral
+variables_dir: /home/src/mage_data/rager
+widgets: []

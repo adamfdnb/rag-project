@@ -1,0 +1,183 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/data_loaders/cyber_tesseract.py
+  downstream_blocks:
+  - cyber_tesseract_bar_chart_t4
+  - cyber_tesseract_table_v9
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - ingest
+  has_callback: false
+  language: python
+  name: Cyber tesseract
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: cyber_tesseract
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/awe_inspiring_zenith.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - chunking
+  has_callback: false
+  language: python
+  name: Awe-inspiring zenith
+  retry_config: null
+  status: failed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: awe_inspiring_zenith
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/eldritch_artifact.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - tokenization
+  has_callback: false
+  language: python
+  name: Eldritch artifact
+  retry_config: null
+  status: failed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: eldritch_artifact
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1723721712
+      name: immortal_elixir.py
+      output: null
+      path: /home/src/llm/rager/data_exporters/immortal_elixir.py
+      relative_path: llm/rager/data_exporters/immortal_elixir.py
+      size: 2054
+    file_source:
+      path: rager/data_exporters/immortal_elixir.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://elasticsearch:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Immortal elixir
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks: []
+  uuid: immortal_elixir
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/custom/numinous_radiance.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - intent_detection
+  has_callback: false
+  language: python
+  name: Numinous radiance
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: numinous_radiance
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-08-13 20:35:20.981269+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Enigmatic apogee
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: enigmatic_apogee
+variables:
+  index_name: documents_20240815_3855
+variables_dir: /home/src/mage_data/rager
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: vertical
+    chart_type: bar chart
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: cyber_tesseract_bar chart_t4
+  retry_config: null
+  status: failed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - cyber_tesseract
+  uuid: cyber_tesseract_bar_chart_t4
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    limit: 10
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: cyber_tesseract_table_v9
+  retry_config: null
+  status: failed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - cyber_tesseract
+  uuid: cyber_tesseract_table_v9
