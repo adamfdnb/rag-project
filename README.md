@@ -55,6 +55,8 @@ Now mage is running on [http://localhost:6789/](http://localhost:6789/)
 
 What's the version of mage? 
 
+#### Answer_Q1: v0.9.72
+
 ## Creating a RAG pipeline
 
 Create a RAG pipeline
@@ -81,6 +83,8 @@ How many FAQ documents we processed?
 * 2
 * 3
 * 4
+
+#### Answer_Q2: 1
 
 ## Q3. Chunking
 
@@ -143,7 +147,7 @@ How many documents (chunks) do we have in the output?
 * 86
 * 96
 
-
+#### Answer_Q3: 86
 
 ## Tokenization and embeddings
 
@@ -246,6 +250,7 @@ What's the last document id?
 
 Also note the index name.
 
+#### Answer_Q4: 6fc3236a
 
 ## Q5. Testing the retrieval
 
@@ -255,6 +260,8 @@ test it.
 Let's use the following query: "When is the next cohort?"
 
 What's the ID of the top matching result?
+
+#### Answer_Q5: bf024675
 
 
 ## Q6. Reindexing
@@ -270,10 +277,5 @@ Let's re-execute the entire pipeline with the updated data.
 
 For the same query "When is the next cohort?". What's the ID of the top matching result?
 
-
-
-## Submit the results
-
-* Submit your results here: https://courses.datatalks.club/llm-zoomcamp-2024/homework/hw5
-* It's possible that your answers won't match exactly. If it's the case, select the closest one.
+#### Answer_Q6: b6fa77f3
 
