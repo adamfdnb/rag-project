@@ -55,7 +55,7 @@ Now mage is running on [http://localhost:6789/](http://localhost:6789/)
 
 What's the version of mage? 
 
-#### Answer_Q1: v0.9.72
+#### Answer_Q1: v0.9.72 | td--create_blocks_tmp4
 
 ## Creating a RAG pipeline
 
